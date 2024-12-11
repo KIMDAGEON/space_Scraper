@@ -13,7 +13,7 @@ public class DisableGrabbingHandModel : MonoBehaviour
 
     void Start()
     {
-        XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
+        UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         grabInteractable.selectEntered.AddListener(HideGrabbingHand);
         grabInteractable.selectExited.AddListener(ShowGrabbingHand);
     }

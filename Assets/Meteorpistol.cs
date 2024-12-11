@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class Meteorpistol : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class Meteorpistol : MonoBehaviour
 
     void Start()
     {
-        XRBaseInteractable grabInteractable = GetComponent<XRBaseInteractable>();
+        UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
         grabInteractable.activated.AddListener(x => StartShoot());
         grabInteractable.deactivated.AddListener(x => StopShoot());
 

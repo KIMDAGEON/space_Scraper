@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class ButtonPushOpenDoor : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class ButtonPushOpenDoor : MonoBehaviour
     public string boolName = "Open";
     void Start()
     {
-        GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => ToggleDoorOpen());
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>().selectEntered.AddListener(x => ToggleDoorOpen());
     }
 
     public void ToggleDoorOpen()
